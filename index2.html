@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="content">
+    <img src="background.jpg" style="width: 100% ; height: 100%;">
+    <div>
+      <h1 id="slogan">Enter Your Book <br><span id="here"> Here</span></h1>
+        <form action="">
+
+    <p id="messagetitre"></p>
+    <input id="titreinput"  type="text" placeholder="Titre" >
+
+    <p id="messageauteur"></p>
+    <input id="auteurinput" type="text" placeholder="Auteur">
+
+    <p id="messageprix"></p>
+    <input id="prixinput" type="number" placeholder="Prix"><br>
+
+    <p id="messagedate"></p>
+    <input type="date" name="date" id="datee"><br>
+
+    <p id="messagelang"></p>
+    <select name="langue" id="langue">
+    <option value="français">Français</option>
+    <option value="arabe">Arabe</option>
+    <option value="anglais">Anglais</option>
+    </select><br>
+      <label for="button">Type</label> br
+    <input type="radio" name="" id="">
+
+    <p id="messagetype"></p>
+    <input id="typeinput" type="text" placeholder="Type"><br>
+
+    <button id="btn" type="submit" >Submit</button>
+
+</form>
+</div>
+</div>
+<main>
+      <img src="backgroundtwo.jpg">
+     
+ </main>
+ <div id="Table_validation">
+<h4>Table Validation</h4>
+<table>
+  <tr>Titre </tr>
+  <tr>Auteur</tr>
+  <tr>prix</tr>
+  <tr>Date</tr>
+  <tr>Langue</tr>
+  <Tr>Type</Tr>
+</table>
+</div>
+
+<!--
+  TODO: 
+-->
+<script>
+
+        var titre = document.getElementById('titreinput')
+        var titremessage = document.getElementById('messagetitre')
+
+
+        var auteur = document.getElementById('auteurinput')
+        var auteurmessage = document.getElementById('messageauteur')
+
+
+        var prix = document.getElementById('prixinput')
+        var prixmessage =  document.getElementById('messageprix')
+
+        var date = document.getElementById('datee')
+        var datemessage = document.getElementById ('messagedate')
+
+        var langue = document.getElementById('langue')
+        var languemessage = document.getElementById ('messagelang')
+
+        var type = document.getElementById('typeinput')
+        var typemeassage = document.getElementById('messagetype')
+
+        var button = document.getElementById('btn')
+
+
+button.addEventListener("click",function(e){
+    e.preventDefault();
+    
+
+    // if (isNaN(prix.value)  ){
+    //   prixmessage.innerHTML = 'Please enter the price in numbers only!'
+    // }
+    if (prix.value){
+    prixmessage.innerHTML = 'succeed ✔'
+    prixmessage.style.color = "rgb(0, 173, 0)"
+  }
+  if (prix.value.trim() == ""){
+      prixmessage.innerHTML  = ' *This field is mandatory'
+      prixmessage.style.color = "rgb(226, 0, 0"
+  } ;
+//   if  (prix.value == null){
+//   prixmessage.innerHTML = 'Please enter the price'
+// }
+
+// Titre
+
+    if (titre.value >= 1){
+
+    titremessage.innerHTML = ' (✖) Please Enter Titre '
+    titremessage.style.color = "rgb(226, 0, 0)"
+    
+    }
+    
+    else {  titremessage.innerHTML  = 'succeed ✔'
+    titremessage.style.color = "rgb(0, 173, 0)"
+  };
+
+  if (titre.value.trim() == ""){
+      titremessage.innerHTML  = ' *This field is mandatory'
+      titremessage.style.color = "rgb(226, 0, 0"
+  } ;
+  // Titre
+
+// auteur
+
+  if (auteur.value >= 1){
+
+    auteurmessage.innerHTML = '(✖) Please Enter Auteur'
+    auteurmessage.style.color = "rgb(226, 0, 0)"
+}
+else {  auteurmessage.innerHTML  = 'succeed ✔'
+      auteurmessage.style.color = "rgb(0, 173, 0)"
+  };
+
+  if (auteur.value.trim() == ""){
+    auteurmessage.innerHTML  = ' *This field is mandatory'
+    auteurmessage.style.color = "rgb(226, 0, 0"
+  } ;
+
+  // auteur
+
+
+  //type
+  if (type.value >= 1){
+
+    typemeassage.innerHTML = '(✖) Please enter the address in letters only !'
+    typemeassage.style.color = "rgb(226, 0, 0)"
+}
+  
+  else {  typemeassage.innerHTML  = 'succeed ✔'
+           typemeassage.style.color = "rgb(0, 173, 0)"
+  };
+  if (type.value.trim() == ""){
+    typemeassage.innerHTML  = ' *This field is mandatory'
+    typemeassage.style.color = "rgb(226, 0, 0"
+  } ;
+  //type
+  
+  //Date
+  if (date.value){
+    datemessage.innerHTML = 'succeed ✔'
+    datemessage.style.color = "rgb(0, 173, 0)"
+  }
+  if (date.value.trim() == ""){
+    datemessage.innerHTML  = ' *This field is mandatory'
+    datemessage.style.color = "rgb(226, 0, 0"
+  } ;
+//date
+//langue
+
+if (langue.value){
+  languemessage.innerHTML = 'succeed ✔'
+    languemessage.style.color = "rgb(0, 173, 0)"
+  }
+//langue
+})
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
