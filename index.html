@@ -21,20 +21,21 @@
     <input id="auteurinput" type="text" placeholder="Auteur">
 
     <p id="messageprix"></p>
-    <input id="prixinput" type="number" placeholder="Prix"><br>
+    <input id="prixinput" type="text" placeholder="Prix"><br>
 
     <p id="messagedate"></p>
     <input type="date" name="date" id="datee"><br>
 
     <p id="messagelang"></p>
     <select name="langue" id="langue">
+    <option id="select" disabled hidden selected value="">Select Langue </option>
     <option value="français">Français</option>
     <option value="arabe">Arabe</option>
     <option value="anglais">Anglais</option>
     </select><br> 
    
     <p id="messagetype"></p>
-    <input id="typeinput" type="text" placeholder="Type"><br>
+    <input id="typeinput" type="z" placeholder="Type"><br>
 
     <button id="btn" type="submit" >Submit</button>
 
@@ -45,20 +46,46 @@
       <img src="backgroundtwo.jpg">
      
  </main>
+ <h4 id="Validation">Table Validation</h4>
  <div id="Table_validation">
-<h4>Table Validation</h4>
+
 <table>
   <tr>
-    <th>erhrh</th>
-    <th>rtzgvzq</th>
-     </tr>    
-  
+    <th>Titre</th>
+    <th>Auteur</th>
+    <th>Prix</th>
+    <th>Date</th>
+    <th>Langue</th>
+    <th>Type</th>
+    <th></th>
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+    <td>Maria Anders</td>
+    <td>Maria Anders</td>
+    <td>Maria Anders</td>
+    <td id="Effacer_Ajouter"><button>Effacer </button> <button>Ajouter</button></td>
+  </tr>
+  <!-- <tr>
+    <td>Centro comercial Moctezuma</td>
+    <td>Francisco Chang</td>
+    <td>Mexico</td>
+    <td>Francisco Chang</td>
+    <td>Francisco Chang</td>
+    <td>Francisco Chang</td>
+  </tr> -->
+
+
+
 </table>
 </div>
 
 <!--
   TODO: 
 -->
+
 <script>
 
         var titre = document.getElementById('titreinput')
@@ -91,7 +118,13 @@ button.addEventListener("click",function(e){
     // if (isNaN(prix.value)  ){
     //   prixmessage.innerHTML = 'Please enter the price in numbers only!'
     // }
-    if (prix.value){
+    if (isNaN(prix.value)) {
+
+      prixmessage.innerHTML = ' (✖) Please Enter Titre '
+      prixmessage.style.color = "rgb(226, 0, 0)"
+
+}
+   else if (prix.value){
     prixmessage.innerHTML = 'succeed ✔'
     prixmessage.style.color = "rgb(0, 173, 0)"
   }
@@ -168,6 +201,11 @@ else {  auteurmessage.innerHTML  = 'succeed ✔'
   } ;
 //date
 //langue
+
+if (langue.value.trim() == "" ){
+  languemessage.innerHTML  = ' *This field is mandatory'
+  languemessage.style.color = "rgb(226, 0, 0"
+}
 
 if (langue.value){
   languemessage.innerHTML = 'succeed ✔'

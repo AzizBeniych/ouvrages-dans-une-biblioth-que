@@ -103,8 +103,53 @@ main img {
     margin-top: 25cm;
     margin-left: 500px;
 }
+#Validation{
 
+    font-size: 35px;
+    color: #50757d;
+    position: absolute;
+    margin-top: 28cm;
+    margin-left: 600px;
+}
+/*
+  TODO: 
+*/
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 200px;
+    margin-left: -95px;
+    color: #50757d;
+  }
+  
+  td, th {
+    border: 1px solid #50757d;
+    padding: 8px;
+    font-size: 25px;
+    color: #50757d;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+  #Effacer_Ajouter button{
+      cursor: pointer;
+      padding: 5px;
+      border-radius: 20px;
+      color: #50757d;
+      border: solid #50757d;
+      background-color: transparent;
+      outline: none;
+  }
+  #Effacer_Ajouter button:hover{
+    background-color: #50757d;
+    color: white;
+  }
 
+/*
+  TODO: 
+*/
 
 
 
