@@ -31,10 +31,8 @@
     <option value="français">Français</option>
     <option value="arabe">Arabe</option>
     <option value="anglais">Anglais</option>
-    </select><br>
-      <label for="button">Type</label> br
-    <input type="radio" name="" id="">
-
+    </select><br> 
+   
     <p id="messagetype"></p>
     <input id="typeinput" type="text" placeholder="Type"><br>
 
@@ -50,12 +48,11 @@
  <div id="Table_validation">
 <h4>Table Validation</h4>
 <table>
-  <tr>Titre </tr>
-  <tr>Auteur</tr>
-  <tr>prix</tr>
-  <tr>Date</tr>
-  <tr>Langue</tr>
-  <Tr>Type</Tr>
+  <tr>
+    <th>erhrh</th>
+    <th>rtzgvzq</th>
+     </tr>    
+  
 </table>
 </div>
 
@@ -108,7 +105,7 @@ button.addEventListener("click",function(e){
 
 // Titre
 
-    if (titre.value >= 1){
+    if (!isNaN(titre.value)) {
 
     titremessage.innerHTML = ' (✖) Please Enter Titre '
     titremessage.style.color = "rgb(226, 0, 0)"
