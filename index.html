@@ -33,9 +33,25 @@
     <option value="arabe">Arabe</option>
     <option value="anglais">Anglais</option>
     </select><br> 
-   
+    <H3 id="Typeee">Type</H3>
     <p id="messagetype"></p>
-    <input id="typeinput" type="z" placeholder="Type"><br>
+   <div class="input_radio">
+    
+    <div class="input_radio">
+    
+      <input type="radio" class="typeinput" name="drone" value="Roman"  >
+      <label for="Roman">Roman</label>
+
+      <input type="radio" class="typeinput" name="drone" value="Essai">
+      <label for="Essai">Essai</label>
+  
+    
+      <input type="radio" class="typeinput" name="drone" value="Bande">
+      <label for="Bande">Bande_Dessinée</label>
+    
+    
+  </div>
+  </div>
 
     <button id="btn" type="submit" >Submit</button>
 
@@ -49,37 +65,27 @@
  <h4 id="Validation">Table Validation</h4>
  <div id="Table_validation">
 
-<table>
-  <tr>
-    <th>Titre</th>
-    <th>Auteur</th>
-    <th>Prix</th>
-    <th>Date</th>
-    <th>Langue</th>
-    <th>Type</th>
-    <th></th>
-  </tr>
-  <tr>
-    <td>Alfreds Futterkiste</td>
-    <td>Maria Anders</td>
-    <td>Germany</td>
-    <td>Maria Anders</td>
-    <td>Maria Anders</td>
-    <td>Maria Anders</td>
-    <td id="Effacer_Ajouter"><button>Effacer </button> <button>Ajouter</button></td>
-  </tr>
-  <!-- <tr>
-    <td>Centro comercial Moctezuma</td>
-    <td>Francisco Chang</td>
-    <td>Mexico</td>
-    <td>Francisco Chang</td>
-    <td>Francisco Chang</td>
-    <td>Francisco Chang</td>
-  </tr> -->
+<!-- 
+  First Name: <input id="fname" type="text"><br>
+  Last Name: <input id="lname" type="text"><br>
+  Tel: <input id="tel" type="number"><br>
+  Date: <input id="date" type="date"><br>
+  <input type="button" id="btn"> -->
 
-
-
-</table>
+  <table id="table" border="1">
+      <tr>
+          <td>Titre </td>
+          <td>Auteur </td>
+          <td>Prix</td>
+          <td>date</td>
+          <td>Langue</td>
+          <td>Type</td>
+          <td>Efface/Modifie</td>
+    
+      </tr>
+  </table>
+  <button id="btn1" onclick="myDeleteFunction()" > Efacer</button>
+  <button id="btn2" onclick="myDeleteFunction()" > Modifie</button>
 </div>
 
 <!--
@@ -105,16 +111,23 @@
         var langue = document.getElementById('langue')
         var languemessage = document.getElementById ('messagelang')
 
-        var type = document.getElementById('typeinput')
+        
+        var type = document.getElementsByClassName('typeinput')
         var typemeassage = document.getElementById('messagetype')
+
+        var tabel = document.getElementsByTagName('table')[0];
+
+        var validation = true ;
+
+        var my_type = document.querySelectorAll('input[name= "drone"]');
+        var typevalue ;
 
         var button = document.getElementById('btn')
 
-
+        
 button.addEventListener("click",function(e){
     e.preventDefault();
     
-
     // if (isNaN(prix.value)  ){
     //   prixmessage.innerHTML = 'Please enter the price in numbers only!'
     // }
@@ -122,16 +135,21 @@ button.addEventListener("click",function(e){
 
       prixmessage.innerHTML = ' (✖) Please Enter Titre '
       prixmessage.style.color = "rgb(226, 0, 0)"
+      validation = false;
 
 }
-   else if (prix.value){
-    prixmessage.innerHTML = 'succeed ✔'
-    prixmessage.style.color = "rgb(0, 173, 0)"
-  }
+
   if (prix.value.trim() == ""){
       prixmessage.innerHTML  = ' *This field is mandatory'
       prixmessage.style.color = "rgb(226, 0, 0"
+      validation = false;
   } ;
+  if (prix.value){
+    prixmessage.innerHTML = 'succeed ✔'
+    prixmessage.style.color = "rgb(0, 173, 0)"
+    validation = true ;
+  }
+
 //   if  (prix.value == null){
 //   prixmessage.innerHTML = 'Please enter the price'
 // }
@@ -142,17 +160,20 @@ button.addEventListener("click",function(e){
 
     titremessage.innerHTML = ' (✖) Please Enter Titre '
     titremessage.style.color = "rgb(226, 0, 0)"
+    validation = false;
     
     }
     
-    else {  titremessage.innerHTML  = 'succeed ✔'
-    titremessage.style.color = "rgb(0, 173, 0)"
-  };
-
   if (titre.value.trim() == ""){
       titremessage.innerHTML  = ' *This field is mandatory'
       titremessage.style.color = "rgb(226, 0, 0"
+      validation = false;
   } ;
+  if (titre.value) { 
+      titremessage.innerHTML  = 'succeed ✔'
+    titremessage.style.color = "rgb(0, 173, 0)"
+    validation = true ;
+  };
   // Titre
 
 // auteur
@@ -161,60 +182,119 @@ button.addEventListener("click",function(e){
 
     auteurmessage.innerHTML = '(✖) Please Enter Auteur'
     auteurmessage.style.color = "rgb(226, 0, 0)"
+    validation = false;
 }
-else {  auteurmessage.innerHTML  = 'succeed ✔'
-      auteurmessage.style.color = "rgb(0, 173, 0)"
-  };
+
 
   if (auteur.value.trim() == ""){
     auteurmessage.innerHTML  = ' *This field is mandatory'
     auteurmessage.style.color = "rgb(226, 0, 0"
+    validation = false;
   } ;
+
+  if (auteur.value) {
+      auteurmessage.innerHTML  = 'succeed ✔'
+      auteurmessage.style.color = "rgb(0, 173, 0)"
+      validation = true ;
+  };
 
   // auteur
 
 
   //type
-  if (type.value >= 1){
+  if (!(type[0].checked || type[1].checked || type[2].checked)){
 
-    typemeassage.innerHTML = '(✖) Please enter the address in letters only !'
+    typemeassage.innerHTML = ' *This field is mandatory !'
     typemeassage.style.color = "rgb(226, 0, 0)"
+    validation = false;
+    
 }
   
   else {  typemeassage.innerHTML  = 'succeed ✔'
            typemeassage.style.color = "rgb(0, 173, 0)"
+           validation = true ;
   };
-  if (type.value.trim() == ""){
-    typemeassage.innerHTML  = ' *This field is mandatory'
-    typemeassage.style.color = "rgb(226, 0, 0"
-  } ;
+  // if (type.value.trim() == ""){
+  //   typemeassage.innerHTML  = ' *This field is mandatory'
+  //   typemeassage.style.color = "rgb(226, 0, 0"
+  // } ;
   //type
   
   //Date
-  if (date.value){
-    datemessage.innerHTML = 'succeed ✔'
-    datemessage.style.color = "rgb(0, 173, 0)"
-  }
+
   if (date.value.trim() == ""){
     datemessage.innerHTML  = ' *This field is mandatory'
     datemessage.style.color = "rgb(226, 0, 0"
+    validation = false;
   } ;
+  if (date.value){
+    datemessage.innerHTML = 'succeed ✔'
+    datemessage.style.color = "rgb(0, 173, 0)"
+    validation = true ;
+  }
 //date
 //langue
 
 if (langue.value.trim() == "" ){
   languemessage.innerHTML  = ' *This field is mandatory'
   languemessage.style.color = "rgb(226, 0, 0"
+  validation = false;
 }
 
 if (langue.value){
   languemessage.innerHTML = 'succeed ✔'
     languemessage.style.color = "rgb(0, 173, 0)"
+    validation = true ;
   }
 //langue
+ 
+
+
+
+
+if (validation) {
+
+                for (var typee of my_type ){
+                  if (typee.checked)
+                  {
+                    typevalue = typee.value;
+                    break;
+                  }
+                }
+
+
+
+        var tablevalidation = ` 
+                                <tr> 
+                                  <td> ${titre.value} </td>
+                                  <td> ${auteur.value} </td>
+                                  <td> ${prix.value} </td>
+                                  <td> ${date.value} </td>
+                                  <td>${langue.options[langue.selectedIndex].value}</td>
+                                  <td> ${typevalue} </td>
+                                   </tr>`;
+                                   tabel.innerHTML += tablevalidation;
+                                  }
+
+
 })
 
 
+        // document.getElementById("btn").addEventListener("click", function(){
+        //     var row = table.insertRow(-1);
+        //     row.insertCell(0).innerHTML = titre.value;
+        //     row.insertCell(1).innerHTML = auteur.value;
+        //     row.insertCell(2).innerHTML = prix.value;
+        //     row.insertCell(3).innerHTML = date.value;
+        //     row.insertCell(4).innerHTML = langue.value;
+        //     row.insertCell(5).innerHTML = type.value;
+
+        // });
+//      function myDeleteFunction() {
+//   document.getElementById("table").deleteRow(2);
+//  }
+
+         
 
 
 </script>
