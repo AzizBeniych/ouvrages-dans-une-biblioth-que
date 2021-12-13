@@ -2,205 +2,147 @@ body{
     margin: 0;
     padding: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
 }
 .content{
     position: absolute;
     
 }
-
-form{
+#backg2{
     position: absolute;
-    margin-top: -22cm;
-    margin-left: 50%;
-    outline: none;
-    
-}
-form input{
-    margin: 5px;
-    padding: 10px;
-    width: 400px;
-    border-radius: 20px;
-    border: solid #50757d;
-    color: #50757d;
-    
-    outline: none;
-    background-color: transparent;
-    
-}
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-#langue{
-    padding: 10px;
-    width: 430px;
-    border-radius: 20px;
-    border: solid #50757d;
-    color: #50757d;
-    background-color: transparent;
-}
-.input_radio{
-    display: flex;
-    margin: 20px;
-    margin-top: 0px;
-    padding: 0px;
-    width: 300px;
-    color: #50757d;
-    margin-left: 35px;
-
-}
-form button{
-    padding: 10px;
-    width: 100px;
-    border-radius: 20px;
-    margin-left: 40%;
-    cursor: pointer;
-
-    color: #50757d;
-    border: solid #50757d;
-    background-color: transparent;
-    outline: none;
-
-}
-
-
-form button:hover{
-    background-color: #50757d;
-    color: white;
-}
-#btn1{
-    padding: 10px;
-    width: 100px;
-    border-radius: 20px;
-    cursor: pointer;
-    color: #50757d;
-    border: solid #50757d;
-    background-color: transparent;
-    outline: none;
-}
-#btn1:hover{
-    background-color: #50757d;
-    color: white;
-
-}
-#btn2{
-    padding: 10px;
-    width: 100px;
-    border-radius: 20px;
-    cursor: pointer;
-    color: #50757d;
-    border: solid #50757d;
-    background-color: transparent;
-    outline: none;
-}
-#btn2:hover{
-    background-color: #50757d;
-    color: white;
-
-}
-#messageprix{
-    color: rgb(0, 173, 0);
-    margin-left: 15px;
-}
-#messageauteur{
-    color: rgb(226, 0, 0);
-    margin-left: 15px;
-    }
-#messagetitre{
-    color: rgb(226, 0, 0);
-    margin-left: 15px;
-}
-#messagetype{
-    margin-left: 60px;
-}
-#Typeee{
-    color: #50757d;
-    margin-left: 190px;
-    font-size: 20px;
-}
-#messagedate{
-    margin-left: 15px;
-}
-#messagelang{
-    margin-left: 15px;
-}
-main img {
     width: 100%;
-    margin-top: 885px;
+    margin-top: 980px;
+}
+form {
     position: absolute;
+    margin-top: -820px;
+    margin-left: 600px;
 }
 #slogan{
     
     position: absolute;
     z-index: 5;
-    margin-top: -24cm;
-    margin-left: 700px;
+    margin-top: 130px;
+    margin-left: 660px;
     color: #50757d;
 }
 #here{
-    margin-left: 35%;
+    margin-left: 40%;
     font-weight: bold;
 }
-#Table_validation{
-    font-size: 30px;
-    color: yellowgreen;
+#logo{
+    width: 140px;
     position: absolute;
-    margin-top: 25cm;
-    margin-left: 500px;
+    z-index: 6;
+    margin-top: 30PX;
+    margin-left: 710px;
+}
+form input{
+    width: 400px;
+    border-radius: 20px;
+    border: solid #50757d;
+    color: #50757d;
+    outline: none;
+    padding: 10px;
+    background-color: transparent;
+    margin: 5px;
+}
+#subm{
+    width: 100px;
+    cursor: pointer;
+    margin-left: 160px;
+    margin-top: 20px;
+}
+#subm:hover{
+   background-color: #50757d;
+   color: aliceblue;
+}
+
+#my_table{
+    position: absolute;
+    margin-top: 1200px;
+    margin-left: 75px;
+    border: solid #50757d;
+    color: #50757d;
+    outline: none;
+    padding: 10px;
+    border-collapse: collapse;
+    background-color: transparent;
+
+}
+
+#labell{
+    position: absolute;
+    margin-left: -2cm;
+    margin-top: 12px;
+    color: #50757d;
+    font-weight: bold;
+}
+#Langue{
+    width: 430px;
+    border-radius: 20px;
+    border: solid #50757d;
+    color: #50757d;
+    outline: none;
+    padding: 10px;
+    background-color: transparent;
+}
+.radio_type{
+    display: flex;
+    margin-left: 40px;
+    width: 400px;
+    color: #50757d;
+    margin-top: 30px;
+    
 }
 #Validation{
 
     font-size: 35px;
     color: #50757d;
     position: absolute;
-    margin-top: 28cm;
-    margin-left: 600px;
+    margin-top: 29cm;
+    margin-left: 400px;
 }
-/*
-  TODO: 
-*/
-table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-    margin-top: 200px;
-    margin-left: -05px;
+#Observation{
+position: absolute;
+margin-top: 1180px;
+font-size: 10px;
+margin-left: 10%;
+color: #50757d;
+}
+#Observation2{
+    position: absolute;
+    margin-top: 950px;
+    font-size: 10px;
+    margin-left: 41%;
     color: #50757d;
-  }
-  
-  td, th {
-    border: 1px solid #50757d;
-    padding: 8px;
-    font-size: 25px;
-    color: #50757d;
-  }
-  
-  tr:nth-child(even) {
-    background-color: #dddddd;
-  }
-  #Effacer_Ajouter button{
-      cursor: pointer;
-      padding: 5px;
-      border-radius: 20px;
-      color: #50757d;
-      border: solid #50757d;
-      background-color: transparent;
-      outline: none;
-  }
-  #Effacer_Ajouter button:hover{
-    background-color: #50757d;
-    color: white;
-  }
-
-/*
-  TODO: 
-*/
-
-
-
-/* .radio{
-    display: flex;
-} */
-
+    }
+    footer{
+        position: absolute;
+        background-color: #50757d80;
+        height: 30px;
+        width: 100%;
+        margin-top: 1685px;
+    }
+    #saddam{
+        position: absolute;
+        margin-top: 1689px;
+        margin-left: 30%;
+        z-index: 4;
+        color: #2c7788;
+    }
+    #logofooter{
+        width: 40px;
+        position: absolute;
+        z-index: 6;
+        margin-top: 1685PX;
+        margin-left: 950px;
+    }
+    #logo2footer{
+        width: 30px;
+        position: absolute;
+        z-index: 6;
+        margin-top: 1685PX;
+        margin-left: 350px;
+    }
 
