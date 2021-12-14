@@ -144,6 +144,9 @@ color: #50757d;
         z-index: 6;
         margin-top: 1685PX;
         margin-left: 350px;
-        color: rgb(224, 0, 0);
+    }
+    #typetit{
+        margin-left: 180px;
+        color: #50757d;
     }
 
