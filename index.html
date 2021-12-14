@@ -137,20 +137,20 @@
 
             if (!isNaN(Titre.value)){
                 message_titre.innerHTML = ' (✖) Please Enter Titre '
-                message_titre.style.color = "rgb(226, 0, 0)"
+                message_titre.style.color = "rgb(224, 0, 0)"
                 valide = false;
                         }
 
             if (Titre.value == "") {
                 valide = false;
                 message_titre.innerHTML = ' *Ce champ est obligatoire';
-                message_titre.style.color = 'red';
+                message_titre.style.color = 'rgb(224, 0, 0)';
             }
 
             if (Titre.value.length > 30) {
                 valide = false;
                 message_titre.innerHTML = ' (✖) Veuillez entrer le titre ';
-                message_titre.style.color = 'red';
+                message_titre.style.color = 'rgb(224, 0, 0)';
             }
 
 
@@ -167,7 +167,7 @@
 
             if (!isNaN(Auteur.value)){
                 message_auteur.innerHTML = ' (✖) Please Enter Titre '
-                message_auteur.style.color = "rgb(226, 0, 0)"
+                message_auteur.style.color = "rgb(224, 0, 0)"
                 valide = false;
                         }
 
@@ -176,12 +176,12 @@
             if (Auteur.value == "") {
                 valide = false;
                 message_auteur.innerHTML =' *Ce champ est obligatoire';
-                message_auteur.style.color = 'red';
+                message_auteur.style.color = 'rgb(224, 0, 0)';
             }
             if (Auteur.value.length > 30) {
                 valide = false;
                 message_auteur.innerHTML = ' (✖) Veuillez entrer le titre ';
-                message_auteur.style.color = 'red';
+                message_auteur.style.color = 'rgb(224, 0, 0)';
             }
 
            
@@ -193,18 +193,18 @@
             if (Prix.value == "") {
                 valide = false;
                 message_prix.innerHTML = ' *Ce champ est obligatoire';
-                message_prix.style.color = 'red';
+                message_prix.style.color = 'rgb(224, 0, 0)';
             }
 
             else if (isNaN(Prix.value)) {
                 valide = false;
                 message_prix.innerHTML = ' (✖) Veuillez entrer le Prix ';
-                message_prix.style.color = 'red';
+                message_prix.style.color = 'rgb(224, 0, 0)';
             }
             else if (Prix.value < 0) {
                 valide = false;
                 message_prix.innerHTML = ' (✖) Veuillez entrer le titre ';
-                message_prix.style.color = 'red';
+                message_prix.style.color = 'rgb(224, 0, 0)';
             }
             else {
                 message_prix.innerHTML = ' Réussir  ✔';
@@ -221,7 +221,7 @@
             if (Datee.value == "") {
                 valide = false;
                 message_date.innerHTML = ' *Ce champ est obligatoire';
-                message_date.style.color = 'red';
+                message_date.style.color = 'rgb(224, 0, 0)';
             }
             else {
                 message_date.innerHTML = ' Réussir  ✔';
@@ -232,7 +232,7 @@
             if (Langue.selectedIndex == "") {
                 valide = false;
                 message_langue.innerHTML = ' *Ce champ est obligatoire';
-                message_langue.style.color = 'red';
+                message_langue.style.color = 'rgb(224, 0, 0)';
             }
             else {
                 message_langue.innerHTML = ' Réussir  ✔';
@@ -246,7 +246,7 @@
             if (!(Typee[0].checked || Typee[1].checked || Typee[2].checked)) {
                 valide = false;
                 message_type.innerHTML = ' *Ce champ est obligatoire';
-                message_type.style.color = 'red';
+                message_type.style.color = 'rgb(224, 0, 0)';
             }
             else {
                 message_type.innerHTML = ' Réussir  ✔';
