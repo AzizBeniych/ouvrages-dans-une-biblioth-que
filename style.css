@@ -122,11 +122,11 @@ color: #50757d;
         background-color: #50757d80;
         height: 30px;
         width: 100%;
-        margin-top: 1685px;
+        margin-top: 1665px;
     }
     #saddam{
         position: absolute;
-        margin-top: 1689px;
+        margin-top: 1669px;
         margin-left: 30%;
         z-index: 4;
         color: #2c7788;
@@ -135,15 +135,15 @@ color: #50757d;
         width: 40px;
         position: absolute;
         z-index: 6;
-        margin-top: 1685PX;
-        margin-left: 950px;
+        margin-top: 1665PX;
+        margin-left: 890px;
     }
     #logo2footer{
         width: 30px;
         position: absolute;
         z-index: 6;
-        margin-top: 1685PX;
-        margin-left: 350px;
+        margin-top: 1665PX;
+        margin-left: 340px;
     }
     #typetit{
         margin-left: 180px;
